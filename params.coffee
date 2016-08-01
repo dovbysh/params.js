@@ -14,7 +14,8 @@ do ->
       # setup
       # warn if invalid object
       unless @validate @_search
-        throw "Initializing Params with invalid location.search."
+        #throw "Initializing Params with invalid location.search."
+        return false;
 
       # build _params keys
       @_params = Params.parse @_search
